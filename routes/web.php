@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,31 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/custom', function () {
+    return view('custom');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.index');
+    })->name('dashboard');
+
+    Route::post('/logout', [RegistrationController::class, 'logout'])->name('logout');
+});
+
+Route::get('/login', [RegistrationController::class, 'showLogin'])->name('login');
+Route::post('/login', [RegistrationController::class, 'login']);
+
+Route::get('/register', [RegistrationController::class, 'showRegister'])->name('register');
+Route::post('/register', [RegistrationController::class, 'register']);
+
+Route::get('/forgetpassword',function(){
+ return view('userlogin.forget');
+})->name('forget');
+Route::get('/driver-login',function(){
+ return view('userlogin.driver-login');
+})->name('driverlogin');
+Route::get('/driver-register',function(){
+ return view('userlogin.driver-register');
+})->name('driver-register');
+
