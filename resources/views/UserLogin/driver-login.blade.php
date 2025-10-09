@@ -37,7 +37,7 @@
             <p class="error">{{ $message }}</p>
         @enderror
                 </div>
-
+                 <input type="hidden" name="role" value="driver">
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>

@@ -78,6 +78,7 @@
         @enderror
         <small id="passwordError" style="color:red; display:none;">Passwords do not match</small>
     </div>
+    <input type="hidden" name="role" value="driver">
 
     <button type="submit" class="register-btn-primary">Register</button>
 </form>

@@ -1,0 +1,18 @@
+.btn-send {
+  max-width: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  background: #52ba7e;        /* light green background */
+  cursor: pointer;
+  /* transition: background .15s ease, transform .08s ease, box-shadow .12s ease; */
+  box-shadow: 0 6px 14px rgba(34,54,194,0.06);
+}
+
+/* style svg inside button to use currentColor so it can be white */
+.btn-send svg {  filter: invert(1); }
