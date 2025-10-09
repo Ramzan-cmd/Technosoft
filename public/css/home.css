@@ -112,7 +112,11 @@ body {
   cursor: pointer;
   color: #333;
 }
-
+ @media(min-width: 1024px){
+  .hamburger{
+    display: none;
+  }
+ }
 
     /* MOBILE MENU */
     .mobile-menu {

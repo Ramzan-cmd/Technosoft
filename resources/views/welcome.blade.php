@@ -44,8 +44,8 @@
   </nav>
 
   <div class="buttons">
-    <a href="#" class="btn-outline">Sign In</a>
-    <a href="#" class="btn-primary23">Get Started</a>
+    <a href="{{ route('login') }}" class="btn-outline">Sign In</a>
+    <a href="{{ route('driverlogin') }}" class="btn-primary23">Get Started</a>
   </div>
 
   <!-- Hamburger -->
